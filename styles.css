@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  font-size: 1rem;
+  color: #c2cbe5;
+  background-color: #131725;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #131725;
+  width: 75vw;
+  margin: auto;
+}
+
+.header__logo {
+  margin-top: 50px;
+}
+
+.hero__section {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  width: 100%;
+  position: relative;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  width: 600px;
+  height: 100%;
+  padding: 50px;
+  position: absolute;
+  z-index: 99;
+}
+
+.hero__left h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #79e3b1;
+}
+
+.title {
+  color: #fefffe;
+}
+
+.hero__left p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+.social_media {
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  width: 100%;
+  color: #5e6688;
+}
+
+.social__media img {
+  margin: 3rem 0.5rem;
+}
+
+.hero__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.hero__right img {
+  width: 100%;
+}
+
+.submission__form {
+  margin-bottom: 30px;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: #2e344a;
+  color: white;
+  font-size: 18px;
+  padding: 25px;
+  /* border: 5px solid #2e344a; */
+  border-radius: 30px;
+  width: 50%;
+  height: 50px;
+}
+
+input[type='email'] {
+  width: 400px;
+  height: 20px;
+  padding-right: 50px;
+}
+
+input[type='submit'] {
+  margin-left: -50px;
+  height: 20px;
+  width: 50px;
+}
+
+.button {
+  background-color: #79e3b1;
+  width: 140px;
+  height: 48px;
+  color: #2e344a;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  /* margin-left: -150px; */
+  outline: none;
+  border: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  width: 140px;
+  height: 48px;
+  background-color: #2e344a;
+  color: #79e3b1;
+  text-decoration: none;
+  border-radius: 4px solid #3ee9e5;
+}
