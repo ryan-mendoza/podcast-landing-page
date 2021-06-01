@@ -28,7 +28,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 40%;
   box-sizing: border-box;
   margin-left: 200px;
   position: relative;
@@ -106,27 +106,6 @@ body {
 
 .input button:hover {
   background-color: #90f7cf;
-}
-
-.button {
-  background-color: #79e3b1;
-  width: 140px;
-  height: 48px;
-  color: #2e344a;
-  border-radius: 40px;
-  font-size: 0.75rem;
-  outline: none;
-  border: none;
-  font-weight: bold;
-}
-
-.button:hover {
-  width: 140px;
-  height: 48px;
-  background-color: #2e344a;
-  color: #79e3b1;
-  text-decoration: none;
-  border-radius: 4px solid #3ee9e5;
 }
 
 .social_media {
