@@ -31,7 +31,7 @@ body {
   box-sizing: border-box;
   margin-left: 200px;
   position: relative;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .main__content {
@@ -129,4 +129,10 @@ body {
 
 .hero__right img {
   width: 100%;
+}
+
+#dots {
+  position: absolute;
+  right: -5px;
+  bottom: 60px;
 }
