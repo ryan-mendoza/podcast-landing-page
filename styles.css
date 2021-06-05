@@ -136,3 +136,37 @@ body {
   right: -5px;
   bottom: 60px;
 }
+
+/* sidebar */
+
+.sidebar {
+  height: 100vh;
+  padding: 30px 10px;
+  background: black;
+  color: white;
+  font-size: larger;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0px 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li:hover {
+  color: grey;
+}
+
+/* dashboard */
+
+.dashboard__main {
+  height: 100%;
+  /* background-color: rgba(138, 143, 192, 0.23); */
+  flex: 1;
+  color: white;
+  padding: 35px;
+}
