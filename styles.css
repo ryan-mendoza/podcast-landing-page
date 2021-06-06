@@ -161,6 +161,11 @@ body {
   color: grey;
 }
 
+.sidebar a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* dashboard */
 
 .dashboard__main {

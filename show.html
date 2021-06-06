@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Podcast Dashboard</title>
+    <title>Podcast Show Dashboard</title>
 </head>
 
-<body onload="fetch_all()">
+<body>
     
     <div class="container" style="padding: 0">
 
@@ -21,17 +21,22 @@
             </ul>
         </div>
 
-        <div class="dashboard__main">
+        <div class="show__main">
             
-            <div class="featured__container" id="featured"></div>
+            <div class="detail__header" id="header"></div>
 
-            <div class="latest">
-                <h2>Latest</h2>
-                <div id="shows"></div>
-            </div>
+            <!-- <div class="episodes">
+                <h2>Episodes</h2>
+                <div id="episodes"></div>
+            </div> -->
         </div>
 
     </div>
 <script src="/js/index.js"></script>
+<script>
+    let id = location.search.replace('?id=', '');
+    console.log(id);
+    // get_show(id);
+</script>
 </body>
 </html>
