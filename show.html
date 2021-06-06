@@ -25,10 +25,12 @@
             
             <div class="detail__header" id="header"></div>
 
-            <!-- <div class="episodes">
+
+
+            <div class="episodes">
                 <h2>Episodes</h2>
                 <div id="episodes"></div>
-            </div> -->
+            </div>
         </div>
 
     </div>
@@ -36,7 +38,8 @@
 <script>
     let id = location.search.replace('?id=', '');
     console.log(id);
-    // get_show(id);
+    get_show(id);
+    get_episodes(id);
 </script>
 </body>
 </html>

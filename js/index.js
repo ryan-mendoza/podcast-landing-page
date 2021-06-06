@@ -1,5 +1,6 @@
 let bearer_token =
-  'BQD8etJWvvJBPUggeI4uJEFu92zN0SVDZFZAn1VilPd9p5qNzEdjqikKMdlD33fmelpyzRQm3HEfKvBUEQcDYjG0dx3UokUO-JoBkTxfWNpqZ83hk4tbx5veWEir8Pr-7-oTFJ8kWT8qbVyiBV_Us3yAfmtNNp9v2r-WTYxnbFvlaZopkj059ivtNmGKPnjQsAfB21CM_EHguv2G0uzOtV24em3JvpIvcPyTvs8KzDPuGMywmrckQlFS2MNtqUIdDTF1pLi_bIa2n2ww8r1LJqwmOQ';
+  'BQAZ_NZyMGkU4lSbPHNhFDHNuEsPhR7AoxiL2ub93f8TasCdpWztcGLf4kPmGD87ed95RDHWn5QxaNo-Hr0aJOFw5ZfpZ0HH_tsEHvbHkxM8OyYd-L4rPeyMS_HSDATjnW_2fFiwA_czbu12nK9sE4CjL4nv5WQGChS05kQNk2JIIGags4Bz9pTvt4ZZH7CgBryxU3JVb89ZZRYyx2uU4e82hL49hD-MgfHZvjQfdsPACx18ovliMPxHrHFIGJgGSmP0esS2C2WKWa3Zj_eWPp452g';
+
 let url = 'https://api.spotify.com/v1/shows';
 let bearer = 'Bearer ' + bearer_token;
 
@@ -75,7 +76,7 @@ function fetch_all() {
 }
 
 function get_show(id) {
-  fetch(url + '/' + id + '?market=US', {
+  fetch(url + '/' + '?id=' + '?market=US', {
     method: 'GET',
     headers: {
       Authorization: bearer,
@@ -86,5 +87,50 @@ function get_show(id) {
     .then((data) => {
       return data.json();
     })
-    .then(console.log);
+    .then((data) => {
+      let header_html = `
+        <img src='${data.images[1].url}' />
+        <div>
+          <p>PODCAST</p>
+          <h2>${data.name}</h2>
+          <h5>${data.publisher}</h5>
+        </div>
+      `;
+      document.getElementById('header').innerHTML = header_html;
+    });
+}
+
+function get_episodes(id) {
+  fetch(url + '/' + '?id=' + '?market=US', {
+    method: 'GET',
+    headers: {
+      Authorization: bearer,
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((data) => {
+      return data.json();
+    })
+    .then((data) => {
+      data.items.forEach((episodes) => {
+        let episode_html = `
+                <div class="episode">
+                    <img src='${episode.images[1].url}' />
+                    <div class="episode__details">
+                        <h2>${episode.name}</h2>
+
+                        <div class="audio">
+                        <div class="play__button">
+                            <audio src="${episode.name}" controls></audio>
+                        </div>
+                        <p>Preview</p>
+                    </div>
+
+                    </div>
+                </div>
+                `;
+        document.getElementById('episodes').innerHTML += episode_html;
+      });
+    });
 }
