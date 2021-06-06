@@ -170,3 +170,88 @@ body {
   color: white;
   padding: 35px;
 }
+
+button {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  color: #2c3348;
+  background-color: #54e6af;
+}
+
+.featured__container {
+  padding: 35px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+  /* border: 1px solid white; */
+}
+
+.featured {
+  display: flex;
+  align-items: center;
+  background: rgba(138, 143, 192, 0.23);
+  border-radius: 20px;
+}
+
+.featured img {
+  border-radius: 20px;
+}
+
+.featured div {
+  width: 100%;
+  padding: 40px;
+  line-height: 2rem;
+  font-size: 1.1em;
+}
+
+.featured div h4 {
+  opacity: 0.6;
+}
+
+.latest h2 {
+  font-size: 2rem;
+}
+
+#shows {
+  display: flex;
+  margin-top: 20px;
+}
+
+.show {
+  background: rgba(138, 143, 192, 0.23);
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  line-height: 2;
+}
+
+.show:hover {
+  background: rgba(138, 143, 192, 0.53);
+}
+
+.show h5 {
+  opacity: 0.6;
+}
+
+/* .show:hover img {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+} */
+
+.show img {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
