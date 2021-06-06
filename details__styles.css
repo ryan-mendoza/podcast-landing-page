@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: borderbox;
+}
+
+body {
+  background-color: #15171a;
+}
+
+.details__container {
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main__header {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(56, 64, 80); */
+  background: linear-gradient(#38404e, #1d2128);
+  width: 100%;
+  padding: 30px;
+  border: 1px solid white;
+}
