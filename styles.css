@@ -241,6 +241,8 @@ button:hover {
   cursor: pointer;
   transition: background 0.4s ease;
   line-height: 2;
+  width: auto;
+  margin-bottom: 20px;
 }
 
 .show:hover {
@@ -260,6 +262,12 @@ button:hover {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#shows {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid white; */
 }
 
 /* detail page */
@@ -356,4 +364,9 @@ button:hover {
 .episode:hover .audio,
 .episode:hover img {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+.episode .episode__details {
+  min-width: 500px;
+  max-width: 500px;
 }

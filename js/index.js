@@ -1,5 +1,5 @@
 let bearer_token =
-  'BQAZ_NZyMGkU4lSbPHNhFDHNuEsPhR7AoxiL2ub93f8TasCdpWztcGLf4kPmGD87ed95RDHWn5QxaNo-Hr0aJOFw5ZfpZ0HH_tsEHvbHkxM8OyYd-L4rPeyMS_HSDATjnW_2fFiwA_czbu12nK9sE4CjL4nv5WQGChS05kQNk2JIIGags4Bz9pTvt4ZZH7CgBryxU3JVb89ZZRYyx2uU4e82hL49hD-MgfHZvjQfdsPACx18ovliMPxHrHFIGJgGSmP0esS2C2WKWa3Zj_eWPp452g';
+  'BQBt-Zg0E7D-5A7vHumttI5nmNuFuyA1NKU50WzLRQMq7bLCKHIe6Ql2mcxWgqZfA0oA3dDq4koSWV-AqKrbglocUWZCHVBr8rXoZVs0x9L6d_oQuMU4a4D3hxS4ZVV_TIFXxvnPA_puimC5Lw6lqfQ8fqDNuqgxf27iWs-LscKCbC45h5L-iJ2-yURRUFlL3dgoMUtAHNuhNmVI8vT6oMFpK5ND5u_VZPQ_Xpm7j_TCI4qP3R9IE55K-DsIu72k_E-Jv99bau4_C6bBujkFbCAubQ';
 
 let url = 'https://api.spotify.com/v1/shows';
 let bearer = 'Bearer ' + bearer_token;
@@ -41,7 +41,7 @@ function fetch_featured() {
 
 function fetch_latest() {
   let show_ids =
-    '27oYFuQyf6VZ18bKP0ffPB%2C0Giuw6eNbTzP9CDZODDrA2%2C2nIvarXvvZcp1cePx69x9N';
+    '0Giuw6eNbTzP9CDZODDrA2,35WpQaPDB5fhFyVD25Hryu,27oYFuQyf6VZ18bKP0ffPB,6Pz9YOO4XJAL2DRt7RauI3';
   fetch(url + '?ids=' + show_ids + '&market=US', {
     method: 'GET',
     headers: {
@@ -119,13 +119,12 @@ function get_episodes(id) {
                     <img src='${episode.images[1].url}' />
                     <div class="episode__details">
                         <h2>${episode.name}</h2>
-
-                        <div class="audio">
-                        <div class="play__button">
-                            <audio src="${episode.name}" controls></audio>
-                        </div>
-                        <p>Preview</p>
                     </div>
+                    <div class="audio">
+                    <div class="play__button">
+                        <audio src="${episode.name}" controls></audio>
+                    </div>
+                    <p>Preview</p>
 
                     </div>
                 </div>
