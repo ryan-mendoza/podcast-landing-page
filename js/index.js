@@ -76,7 +76,7 @@ function fetch_all() {
 }
 
 function get_show(id) {
-  fetch(url + '/' + '?id=' + '?market=US', {
+  fetch(url + '/' + '?id=' + '&market=US', {
     method: 'GET',
     headers: {
       Authorization: bearer,
@@ -101,7 +101,7 @@ function get_show(id) {
 }
 
 function get_episodes(id) {
-  fetch(url + '/' + '?id=' + '?market=US', {
+  fetch(url + '/' + '?id=' + '&market=US', {
     method: 'GET',
     headers: {
       Authorization: bearer,
@@ -122,7 +122,7 @@ function get_episodes(id) {
                     </div>
                     <div class="audio">
                     <div class="play__button">
-                        <audio src="${episode.name}" controls></audio>
+                        <audio src="${episode.audio_preview_url}" controls></audio>
                     </div>
                     <p>Preview</p>
 
